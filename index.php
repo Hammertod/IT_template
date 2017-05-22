@@ -93,19 +93,19 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 // Adjusting content width
 if ($this->countModules('position-7') && $this->countModules('position-8'))
 {
-	$span = "span6";
+	$span = 'span6';
 }
 elseif ($this->countModules('position-7') && !$this->countModules('position-8'))
 {
-	$span = "span9";
+	$span = 'span9';
 }
 elseif (!$this->countModules('position-7') && $this->countModules('position-8'))
 {
-	$span = "span9";
+	$span = 'span9';
 }
 else
 {
-	$span = "span12";
+	$span = 'span12';
 }
 
 // Logo file or site title param
@@ -126,31 +126,49 @@ else
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+	<jdoc:include type="head" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <title>Document</title>
 </head>
+
 <body>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <i class="fa fa-television fa-5x" aria-hidden="true"></i>
-        <i class="PlusCenter fa fa-plus-circle fa-2x" aria-hidden="true"></i>
-        <i class="fa fa-bar-chart fa-5x" aria-hidden="true"></i></div>
+<section class="header">
+<div class="navbar navbar-default navbar-fixed-top">
+	 <div class="container">
+		 <div class="navbar-header">
+			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				 <span class="icon-bar"></span>
+				 <span class="icon-bar"></span>
+				 <span class="icon-bar"></span>
+			 </button>
+			 		<a class="navbar-brand" href=""><i class="fa fa-television fa-2x" aria-hidden="true"></i> <span class="logo"> IT & StartUP`s</span> </a>
+		 </div>
+		 <div class="navbar-collapse collapse">
+			 <ul class="nav navbar-nav navbar-right">
+				 <li class="active"><a href="">Home</a></li>
+				 <li><a href="#">Про нас</a></li>
+				 <li><a href="#">News</a></li>
+				 <li><a href="#">Работы</a></li>
+				 <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+			 </ul>
+		 </div>
+	 </div>
+ </div>
+</section>
 
-      <div class="search col-lg-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex iusto obcaecati cumque soluta blanditiis expedita autem eos explicabo itaque quibusdam, reiciendis doloribus, at voluptatibus inventore. Nesciunt eligendi temporibus deserunt veritatis.</div>
-    </div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 maxpicsize"> <jdoc:include type="component" name="col-left" style="none"/>
+			<jdoc:include type="modules" name="col-left" style="xhmtl"/>
+		</div>
 
-    <div class="row">
-      <div class="col-md-8">IT -N- StartUps</div>
-      <div class="col-lg-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex animi repellat incidunt iusto laboriosam, sunt illum esse error eligendi deserunt. Ullam, impedit. Eius culpa, vitae explicabo voluptatibus asperiores veniam, commodi.</div>
-    </div>
-
-  </div>
-
+		<div class="col-md-6 maxpicsize">
+			<jdoc:include type="modules" name="col-right" style="xhmtl"/>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>

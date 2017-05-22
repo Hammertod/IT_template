@@ -1,8 +1,50 @@
-.search {
-  padding:10px;
-  color:red;
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway');
+
+@font-face {
+	font-family: "Lato";
+	src: url("fonts/Lato/Lato.eot");
+	src: url("fonts/Lato/Lato.eot?#iefix") format("embedded-opentype"),
+			 url("fonts/Lato/Lato.woff") format("woff"),
+			 url("fonts/Lato/Lato.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
 }
 
-.PlusCenter{
+@font-face {
+	font-family: "Raleway";
+	src: url("fonts/Raleway/Raleway.eot");
+	src: url("fonts/Raleway/Raleway.eot?#iefix") format("embedded-opentype"),
+			 url("fonts/Raleway/Raleway.woff") format("woff"),
+			 url("fonts/Raleway/Raleway.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
 
+
+body {
+  background: #f6f6f6;
+}
+
+
+.header {
+  width: 100%;
+  background:#33CC66;
+}
+
+
+.navigation {
+  width: 100%;
+  background:#33CC66;
+}
+
+.maxpicsize{
+  max-width:90%;
+  overflow:hidden;
+}
+
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
