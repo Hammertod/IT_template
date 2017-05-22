@@ -43,6 +43,8 @@ $doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/b
 
 // Add Stylesheets
 $doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/css/bootstrap.css');
+$doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/css/font-awesome/css/font-awesome.css');
+$doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/css/style.css');
 
 // Use of Google Font
 if ($this->params->get('googleFont'))
@@ -120,96 +122,35 @@ else
 	$logo = '<span class="site-title" title="' . $sitename . '">' . $sitename . '</span>';
 }
 ?>
+
 <!DOCTYPE html>
-<html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
+<html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<jdoc:include type="head" />
-	<!--[if lt IE 9]><script src="<?php echo JUri::root(true); ?>/media/jui/js/html5.js"></script><![endif]-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Document</title>
 </head>
-<body class="site <?php echo $option
-	. ' view-' . $view
-	. ($layout ? ' layout-' . $layout : ' no-layout')
-	. ($task ? ' task-' . $task : ' no-task')
-	. ($itemid ? ' itemid-' . $itemid : '')
-	. ($params->get('fluidContainer') ? ' fluid' : '');
-	echo ($this->direction == 'rtl' ? ' rtl' : '');
-?>">
-	<!-- Body -->
-	<div class="body">
-		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>/">
-						<?php echo $logo; ?>
-						<?php if ($this->params->get('sitedescription')) : ?>
-							<?php echo '<div class="site-description">' . htmlspecialchars($this->params->get('sitedescription'), ENT_COMPAT, 'UTF-8') . '</div>'; ?>
-						<?php endif; ?>
-					</a>
-					<div class="header-search pull-right">
-						<jdoc:include type="modules" name="position-0" style="none" />
-					</div>
-				</div>
-			</header>
-			<?php if ($this->countModules('position-1')) : ?>
-				<nav class="navigation" role="navigation">
-					<div class="navbar pull-left">
-						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</a>
-					</div>
-					<div class="nav-collapse">
-						<jdoc:include type="modules" name="position-1" style="none" />
-					</div>
-				</nav>
-			<?php endif; ?>
-			<jdoc:include type="modules" name="banner" style="xhtml" />
-			<div class="row-fluid">
-				<?php if ($this->countModules('position-8')) : ?>
-					<!-- Begin Sidebar -->
-					<div id="sidebar" class="span3">
-						<div class="sidebar-nav">
-							<jdoc:include type="modules" name="position-8" style="xhtml" />
-						</div>
-					</div>
-					<!-- End Sidebar -->
-				<?php endif; ?>
-				<main id="content" role="main" class="<?php echo $span; ?>">
-					<!-- Begin Content -->
-					<jdoc:include type="modules" name="position-3" style="xhtml" />
-					<jdoc:include type="message" />
-					<jdoc:include type="component" />
-					<jdoc:include type="modules" name="position-2" style="none" />
-					<!-- End Content -->
-				</main>
-				<?php if ($this->countModules('position-7')) : ?>
-					<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<jdoc:include type="modules" name="position-7" style="well" />
-						<!-- End Right Sidebar -->
-					</div>
-				<?php endif; ?>
-			</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
-			<hr />
-			<jdoc:include type="modules" name="footer" style="none" />
-			<p class="pull-right">
-				<a href="#" id="back-top">
-					<?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?>
-				</a>
-			</p>
-			<p>
-				&copy; <?php echo date('Y'); ?> <?php echo $sitename; ?>
-			</p>
-		</div>
-	</footer>
-	<jdoc:include type="modules" name="debug" style="none" />
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <i class="fa fa-television fa-5x" aria-hidden="true"></i>
+        <i class="PlusCenter fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-bar-chart fa-5x" aria-hidden="true"></i></div>
+
+      <div class="search col-lg-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex iusto obcaecati cumque soluta blanditiis expedita autem eos explicabo itaque quibusdam, reiciendis doloribus, at voluptatibus inventore. Nesciunt eligendi temporibus deserunt veritatis.</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">IT -N- StartUps</div>
+      <div class="col-lg-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex animi repellat incidunt iusto laboriosam, sunt illum esse error eligendi deserunt. Ullam, impedit. Eius culpa, vitae explicabo voluptatibus asperiores veniam, commodi.</div>
+    </div>
+
+  </div>
+
+
 </body>
 </html>
