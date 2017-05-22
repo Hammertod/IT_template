@@ -14,6 +14,7 @@
 		<folder>images</folder>
 		<folder>js</folder>
 		<folder>language</folder>
+		<folder>fonts</folder>
 
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
