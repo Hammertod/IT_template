@@ -39,12 +39,10 @@ else
 }
 
 // Add JavaScript Frameworks
-JHtml::_('bootstrap.framework');
-
-$doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/template.js');
+$doc->addScriptVersion($this->baseurl . '/templates/' . $this->template . '/js/bootstrap.js');
 
 // Add Stylesheets
-$doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/css/template.css');
+$doc->addStyleSheetVersion($this->baseurl . '/templates/' . $this->template . '/css/bootstrap.css');
 
 // Use of Google Font
 if ($this->params->get('googleFont'))
