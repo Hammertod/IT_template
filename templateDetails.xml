@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.1" type="template" client="site">
-	<name>IT_template</name>
+	<name>ittemplate</name>
 	<version>1.0</version>
 	<creationDate>22/05/2017</creationDate>
 	<author>Vitya and Denis</author>
 	<authorEmail>modest-ua@i.ua</authorEmail>
 	<copyright>Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.</copyright>
-	<description>TPL_IT_TEMPLATE_XML_DESCRIPTION</description>
+	<description>TPL_ITTEMPLATE_XML_DESCRIPTION</description>
 	<files>
 		<folder>css</folder>
 		<folder>html</folder>
@@ -28,11 +28,11 @@
 		<position>footer</position>
 	</positions>
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.IT_template.ini</language>
-		<language tag="en-GB">en-GB/en-GB.IT_template.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_ittemplate.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_ittemplate.sys.ini</language>
 
-		<language tag="en-GB">ru-RU/ru-RU.IT_template.ini</language>
-		<language tag="en-GB">ru-RU/ru-RU.IT_template.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_ittemplate.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_ittemplate.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
@@ -41,7 +41,7 @@
 				<field name="sitename"  type="text" default=""
 					label="JGLOBAL_TITLE"
 					description="JFIELD_ALT_PAGE_TITLE_LABEL"
-					filter="string" />
+					filter="string"> </field>
 
 			</fieldset>
 		</fields>
